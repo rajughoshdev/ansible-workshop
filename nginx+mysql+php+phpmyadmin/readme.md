@@ -1,0 +1,1 @@
+# Testing ansible phpmyadmin roles

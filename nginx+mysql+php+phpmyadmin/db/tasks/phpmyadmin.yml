@@ -1,0 +1,9 @@
+---
+- name: Install phpMyadmin 
+  apt: update_cache=yes name=phpmyadmin state=latest
+
+- name: link phpmyadmin 
+  file: src=/usr/share/phpmyadmin dest=/var/www/html/phpmyadmin state=link
+  notify:
+   - php5-fpm restart
+   - nginx restart

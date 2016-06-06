@@ -1,0 +1,17 @@
+---
+- name: Installing PHP packages
+  apt: update_cache=yes state=latest name={{ item }} state=latest
+  with_items:
+    - php5 
+    - php5-fpm 
+    - php5-mysql 
+    - php5-curl
+    - php5-mcrypt 
+    - php5-gd 
+    - php5-cli
+
+- name: ensure php5-fpm cgi.fix_pathinfo=0
+  lineinfile: dest=/etc/php5/fpm/php.ini regexp='^(.*)cgi.fix_pathinfo=' line=cgi.fix_pathinfo=0
+  notify:
+    - php-fpm restart    
+    - nginx restart
