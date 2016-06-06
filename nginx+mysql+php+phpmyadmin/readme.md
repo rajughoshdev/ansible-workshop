@@ -1,1 +1,1 @@
-# Nginx, Mysql PHP & Phpmyadmin roles.
+# Nginx, Mysql, PHP & Phpmyadmin roles.
