@@ -1,0 +1,13 @@
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server ipv6only=on;
+
+    root /var/www/rajudemo;
+    index index.html index.htm;
+
+    server_name rajudemo.com www.rajudemo.com;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}

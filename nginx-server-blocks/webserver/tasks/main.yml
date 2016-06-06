@@ -1,0 +1,43 @@
+---
+- name: Installing Web server (Nginx)
+  apt: update_cache=yes state=latest name=nginx 
+  notify: 
+  - nginx restart
+
+- name: Create Directory (/var/www/rajudemo.com/html)  
+  file: path="/var/www/{{item}}" state=directory mode=755 owner=www-data group=www-data
+  with_items:
+    - rajutest
+    - rajudemo
+
+- name: insert rajudemo.com home page 
+  template: src=index.html.j2 dest=/var/www/rajudemo/index.html owner=www-data group=www-data mode=0755
+
+- name: insert rajutest.com home page. 
+  template: src=index2.html.j2 dest=/var/www/rajutest/index.html owner=www-data group=www-data mode=0755
+
+- name: insert rajudemo.com config file (/etc/nginx/sites-available/)
+  template: src=rajudemo.j2 dest=/etc/nginx/sites-available/rajudemo
+
+- name: insert rajutest.com config file (/etc/nginx/sites-avaiable/)
+  template: src=rajutest.j2 dest=/etc/nginx/sites-available/rajutest
+  
+- name: enable rajudemo.com config file (/etc/nginx/sites-enable/)
+  file: src=/etc/nginx/sites-available/rajudemo dest=/etc/nginx/sites-enabled/rajudemo state=link 
+  notify:
+  - nginx restart 
+
+- name: enable rajudemo.com config file(/etc/nginx/sites-enable/)
+  file: src=/etc/nginx/sites-available/rajutest dest=/etc/nginx/sites-enabled/rajutest state=link
+  notify: 
+  - nginx restart
+
+- name: Remove web Server nginx default sites-available config file.
+  file: path=/etc/nginx/sites-available/default state=absent
+  notify:
+  - nginx restart
+
+- name: Remove web Server nginx default sites-enabled config file. 
+  file: path=/etc/nginx/sites-enabled/default state=absent
+  notify: 
+  - nginx restart
