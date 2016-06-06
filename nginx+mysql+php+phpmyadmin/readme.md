@@ -1,1 +1,1 @@
-# Testing ansible phpmyadmin roles
+# Nginx, Mysql, PHP & Phpmyadmin roles.
