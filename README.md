@@ -1,5 +1,5 @@
 #Ansible Roles Example
-####starting examples of th ansible playbook, features and how they work together.
+###Starting examples of the ansible playbook, features and how they work together.
 
 Ansible is a radically simple IT automation engine that automates cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs.
 
