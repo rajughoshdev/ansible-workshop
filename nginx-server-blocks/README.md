@@ -29,10 +29,7 @@ Once the new VM is up and running (after `vagrant up` is complete and you're bac
 
 You need to modify your host machine's hosts file for Linux/Mac: `sudo vim /etc/hosts`; adding the below:
 
-    192.168.77.100 yourdomainname.com
+    192.168.88.100 rajudemo.com
+    192.168.88.100 rajutest.com
 
-After configuring, you can visit http://192.168.77.100  http://yourdomainname.com in a browser, then you'll see the Nginx defult page or your create testing page. 
-
-For PhpMyadmin you can visit http://192.168.77.100/phpmyadmin or http://yourdomainname.com/phpmyadmin in a browser, then you'll see the phpmyadmin login page.
-
-Mysql created user name and password  `username: rajughosh password:demodb` or you can change very easily by modify `webserver/tasks/mysql.yml`    
+After configuring, you can visit http://rajudemo.com and http://rajutest.com  in a browser, then you'll see the sucessfull page. 
