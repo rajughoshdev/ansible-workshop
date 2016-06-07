@@ -1,11 +1,9 @@
-# Ansible roles for  Nginx, Mysql, PHP & Phpmyadmin.
+# Ansible roles for Nginx,Mysql,PHP & Phpmyadmin.
 
 ## Requirements
-
 [Vagrant](https://www.vagrantup.com) and [VirtualBox](https://www.virtualbox.org) or (other VM provider like [VmWare](https://www.vmware.com) should be used to quickly build or construct a virtual servers and for installing Nginx, Mysql, PHP & Phpmyadmin using the [Ansible](http://www.ansible.com/) provisioner.
 
 ## Getting Started
-
 There is a file name `Vagrantfile` which will tells to Vagrant how to set up your virtual machine in VirtualBox.
 
 To run the vagrant file, you need to have done the following:
@@ -24,9 +22,8 @@ You need to modify your host machine's hosts file for Linux/Mac: `sudo vim /etc/
 
     192.168.99.100  yourhostname or yourdomainname.com
 
-(Where `yourhostname.com or yourdomainname.com`) is the hostname you have configured in the `Vagrantfile`).
+Where (`yourhostname or yourdomainname.com`) is the hostname you have configured in the `Vagrantfile`).
 
-After configuring, you can visit http://192.168.99.100/ or http://yourhostname/ or  http://yourdomainname.com or  in a browser, then you'll see the Apache 'It works!' page.
+After configuring, you can visit http://192.168.99.100 or http://yourhostname or  http://yourdomainname.com in a browser, then you'll see the Nginx defult page or your create testing page. 
 
-If you'd like additional assistance editing your hosts file, please read [How do I modify my hosts file?](http://www.rackspace.com/knowledge_center/article/how-do-i-modify-my-hosts-file) from Rackspace.
-
+For PhpMyadmin you can visit http://192.168.99.100/phpmyadmin or http://yourhostname/phpmyadmin or  http://yourdomainname.com/phpmyadmin in a browser, then you'll see the phpmyadmin login page. 
