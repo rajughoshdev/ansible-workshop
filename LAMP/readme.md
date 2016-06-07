@@ -9,7 +9,7 @@ There is a file name `Vagrantfile` which will tells to Vagrant how to set up you
 To run the vagrant file, you need to have done the following:
 
   1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-  2. Install [Vagrant](https://www.vagrantup.com/downloads.html)
+  2. Install [Vagrant](https://www.vagrantup.com/downloads.html)  
   3. Install [Ansible](http://docs.ansible.com/intro_installation.html) or 
   <pre>
   sudo apt-get install software-properties-common
