@@ -1,0 +1,16 @@
+---
+- name: Install mysql Packages 
+  apt: update_cache=yes state=latest name={{ item }}
+  with_items:
+    - mysql-server
+    - mysql-client 
+    - mysql-common
+    - python-mysqldb
+
+- name: creat the mysql database
+  mysql_db: name=demo state=present 
+
+- name: create the mysql user
+  mysql_user: name=rajughosh password="demodb" priv="*.*:ALL" state=present
+
+

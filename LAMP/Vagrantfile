@@ -1,0 +1,22 @@
+	Vagrant.configure("2") do |config|
+#Description ("Vagrant.configure("2") do |config|") >> The "2" in the first line above represents the version of the configuration object config that will be used for configuration for that block (the section between the do and the end). This object can be very different from version to version.
+	config.vm.box 	= "ubuntu/trusty64"
+#Description ("config.vm.box ="ubuntu/trusty64") >> This configures what box the machine will be brought up against. The value here should be the name of an installed box or a shorthand name of a box. To know about boxs name https://atlas.hashicorp.com/boxes/search
+	config.vm.hostname 	= "raju.ghosh"
+#Description ("config.vm.hostname ="system"") >> The hostname the machine should have. Defaults to nil. If nil, Vagrant will not manage the hostname. If set to a string, the hostname will be set on boot.
+	config.vm.network "private_network", ip: "192.168.77.100"
+#Description ("config.vm.hostname ="system"") >> The hostname the machine should have. Defaults to nil. If nil, Vagrant will not manage the hostname. If set to a string, the hostname will be set on boot.
+
+	 config.vm.provider "virtualbox" do |vb|
+# Display the VirtualBox GUI when booting the machine
+#  vb.gui = true
+# Customize the amount of memory on the VM:
+	 vb.memory = "1024"
+	 end
+	
+	config.vm.provision "ansible" do |ansible|
+	ansible.playbook = "site.yml"
+#Description (ansible.playbook = "playbook.yml") >> The playbook option is strictly required by both Ansible provisioners (ansible and ansible_local), as illustrated in this basic Vagrantfile` configuration.		
+	end
+
+end

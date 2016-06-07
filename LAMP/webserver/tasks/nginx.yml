@@ -1,0 +1,32 @@
+---
+- name: Installing Web Server Nginx and Ensure latest version.
+  apt: update_cache=yes state=latest name=nginx
+
+- name: Create Web Directory 
+  file: path=/var/www/html state=directory mode=0755 owner=www-data group=www-data
+
+- name: Insert PHP demo page. 
+  template: src=index.php.j2 dest=/var/www/html/index.php mode=0755 owner=www-data group=www-data
+  notify: 
+    - nginx restart
+
+- name: Remove nginx default config file.
+  file: path=/etc/nginx/sites-available/default state=absent
+  notify:
+    - nginx restart
+ 
+- name: Remove nginx default enabled config file. 
+  file: path=/etc/nginx/sites-enabled/default state=absent
+  notify:
+   - nginx restart
+
+- name: Insert nginx conf file
+  template: src=nginx.conf.j2 dest=/etc/nginx/sites-available/nginx.conf
+  notify:
+    - nginx restart
+
+- name: Enable nginx conf file
+  file: src=/etc/nginx/sites-available/nginx.conf dest=/etc/nginx/sites-enabled/nginx.conf state=link
+  notify:
+    - nginx restart
+ 
