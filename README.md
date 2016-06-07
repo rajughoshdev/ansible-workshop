@@ -9,10 +9,13 @@ It uses no agents and no additional custom security infrastructure, so it's easy
 
 On this page, we'll give you a really quick overview so you can see things in context. For more detail, hop over to [docs.ansible.com](https://docs.ansible.com)
 
-#Install [Ansible](http://docs.ansible.com/intro_installation.html)  
+#installing ansible on ubuntu
   <pre>
   sudo apt-get install software-properties-common
+  
   sudo apt-add-repository ppa:ansible/ansible
+  
   sudo apt-get update
+  
   sudo apt-get install ansible
   </pre>
