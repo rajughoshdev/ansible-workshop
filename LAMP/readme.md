@@ -34,7 +34,7 @@ You need to modify your host machine's hosts file for Linux/Mac: `sudo vim /etc/
 
     192.168.77.100 yourdomainname.com
 
-After configuring, you can visit http://192.168.77.100  http://yourdomainname.com in a browser, then you'll see the Nginx defult page or your create testing page. 
+After configuring, you can visit http://192.168.77.100 or http://yourdomainname.com in a browser, then you'll see the Nginx defult page or your create testing page. 
 
 For PhpMyadmin you can visit http://192.168.77.100/phpmyadmin or http://yourdomainname.com/phpmyadmin in a browser, then you'll see the phpmyadmin login page.
 
