@@ -10,7 +10,16 @@ To run the vagrant file, you need to have done the following:
 
   1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
   2. Install [Vagrant](https://www.vagrantup.com/downloads.html)
-  3. Install [Ansible](http://docs.ansible.com/intro_installation.html)
+  3. Install [Ansible](http://docs.ansible.com/intro_installation.html) or 
+  <pre>
+  sudo apt-get install software-properties-common
+
+  sudo apt-add-repository ppa:ansible/ansible
+
+  sudo apt-get update
+
+  sudo apt-get install ansible
+  </pre>
 
 Once all of that is done, you can simply type in `vagrant up`, and Vagrant will create a new VM, install the base box, and configure it.
 
