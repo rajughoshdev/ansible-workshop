@@ -1,7 +1,7 @@
 # Ansible roles for Nginx,Mysql,PHP & Phpmyadmin.
 
 ## Requirements
-[Vagrant](https://www.vagrantup.com) and [VirtualBox](https://www.virtualbox.org) or (other VM provider like [VmWare](https://www.vmware.com) should be used to quickly build or construct a virtual servers and for installing Nginx, Mysql, PHP & Phpmyadmin using the [Ansible](http://www.ansible.com/) provisioner.
+[Vagrant](https://www.vagrantup.com) and [VirtualBox](https://www.virtualbox.org) or (other VM provider like [VmWare](https://www.vmware.com)) should be used to quickly build or construct a virtual servers and for installing Nginx, Mysql, PHP & Phpmyadmin using the [Ansible](http://www.ansible.com/) provisioner.
 
 ## Getting Started
 There is a file name `Vagrantfile` which will tells to Vagrant how to set up your virtual machine in VirtualBox.
