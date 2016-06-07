@@ -9,17 +9,8 @@ It uses no agents and no additional custom security infrastructure, so it's easy
 
 On this page, we'll give you a really quick overview so you can see things in context. For more detail, hop over to [docs.ansible.com](https://docs.ansible.com)
 
-## Requirements
-[Vagrant](https://www.vagrantup.com) and [VirtualBox](https://www.virtualbox.org) or (other VM provider like [VmWare](https://www.vmware.com)) should be used to quickly build or construct a virtual servers and for installing Nginx, Mysql, PHP & Phpmyadmin using the [Ansible](http://www.ansible.com/) provisioner.
+Install [Ansible](http://docs.ansible.com/intro_installation.html) or 
 
-## Getting Started
-There is a file name `Vagrantfile` which will tells to Vagrant how to set up your virtual machine in VirtualBox.
-
-To run the vagrant file, you need to have done the following:
-
-  1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-  2. Install [Vagrant](https://www.vagrantup.com/downloads.html)
-  3. Install [Ansible](http://docs.ansible.com/intro_installation.html) or 
   <pre>
   sudo apt-get install software-properties-common
 
@@ -29,8 +20,3 @@ To run the vagrant file, you need to have done the following:
 
   sudo apt-get install ansible
   </pre>
-
-Once all of that is done, you can simply type in `vagrant up`, and Vagrant will create a new VM, install the base box, and configure it.
-
-Once the new VM is up and running (after `vagrant up` is complete and you're back at the command prompt), you can log into it via SSH if you'd like by typing in `vagrant ssh`. Otherwise, the next steps are below.
-
