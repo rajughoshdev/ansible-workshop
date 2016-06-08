@@ -1,8 +1,9 @@
 ---
 - hosts: all
-  sudo: yes
+  become: yes
+  remote_user: root
   roles: 
-  - webserver
+   - webserver
   
 
 
