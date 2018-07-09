@@ -28,7 +28,8 @@ Let’s create our inventory, but before doing so we need to create a new direct
 
 <pre>
 mkdir ~/apps
-<pre>
+</pre>
+
 Create a new plain text file called `hosts` in the new directory, with the following contents:
 
 <pre>
@@ -36,7 +37,7 @@ Create a new plain text file called `hosts` in the new directory, with the follo
 201.23.11.123
 201.23.11.124
 201.23.11.125
-<pre>
+</pre>
 
 The first line indicates the group name and the lines that follow are our hosts. Multiple groups can be created using the `[group name]` syntax and hosts can belong to multiple groups. For example:
 <pre>
@@ -50,14 +51,14 @@ The first line indicates the group name and the lines that follow are our hosts.
 
 [db]
 201.23.11.129
-<pre>
+</pre>
 
 Now we need to instruct Ansible where our inventory file is located. Create a new file called `ansible.cfg` with the following contents.
 
 <pre>
 [defaults]
 inventory = hosts
-<pre>
+</pre>
 
 # Running Commands
 
@@ -66,7 +67,7 @@ With our inventory file populated we can start running basic commands on the hos
 Let’s take a look at the ping module, which ensures we can connect to our hosts:
 <pre> 
 ansible production -m ping -u root
-<pre>
+</pre>
 
 
 # Playbooks
@@ -88,7 +89,7 @@ Let’s take a look at how our playbook is organized.
       └── main.yml
     ├── tasks
       └── main.yml
-<pre>
+</pre>
 
 The `hosts` and `ansible.cfg` files should be familiar, but let’s take a look at the `provision.yml` file.
 
@@ -99,7 +100,7 @@ The `hosts` and `ansible.cfg` files should be familiar, but let’s take a look 
   remote_user: root
   roles: 
      - apps 
-<pre>
+</pre>
 
 let's have a look for ansible [Privilege Escalation](https://docs.ansible.com/ansible/latest/user_guide/become.html) 
 
