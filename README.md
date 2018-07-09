@@ -106,4 +106,4 @@ let's have a look for ansible [Privilege Escalation](https://docs.ansible.com/an
 
 Get free ebook [mastering-ansible](https://www.ansible.com/resources/ebooks/mastering-ansible)
 
-Get free resource [awesome-ansible] (https://github.com/jdauphant/awesome-ansible)
+Get free resource [awesome-ansible](https://github.com/jdauphant/awesome-ansible)
